@@ -1,0 +1,18 @@
+
+version: "3"
+
+services:
+  # name of service = app
+  app:
+    build:
+      # set context to . (current directory), that running docker-compose from
+      context: .
+    ports:
+      # map port from LOCAL HOST to IMAGE
+      - "8000:8000"
+    volumes:
+      #  map directory from local-project-directory to the app-in-docker
+      - ./app:/app
+      # run script-command in shell
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"

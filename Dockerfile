@@ -5,8 +5,13 @@ MAINTAINER Recipe App Advanced
 ENV PYTHONUNBUFFERED 1
 #  include all the dependencies
 # copy from directory adjacent to the Dockerfile, and copy from image to /requirements.txt
+
 COPY ./requirements.txt /requirements.txt
+RUN apk add --update --no-cache postgresql-client
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+      gcc libc-dev linux-headers postgresql-dev
 RUN pip install -r /requirements.txt
+RUN apk del .tmp-build-deps
 
 # create and make "/app" to DEFAULT directory
 RUN  mkdir /app

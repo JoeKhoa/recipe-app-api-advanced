@@ -23,7 +23,6 @@ services:
       - DB_NAME=app
       - DB_USER=postgres
       - DB_PASS=supersecretpassword
-
     # "depends on MEAN = > "we want app-service depends on db-service
       # 1. db will start before app
       # 2.  so db-service will available when app-environment use the DB_HOST, DB_NAME ...

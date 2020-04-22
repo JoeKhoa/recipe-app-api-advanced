@@ -1,7 +1,6 @@
-C:/Users/Lilti/Documents/LEARNING/PROGRAMMING/z.2.Source_code/Python/Python_ATOM/Django_REST/recipe-app-api-advanced
+ C:/Users/Lilti/Documents/LEARNING/PROGRAMMING/z.2.Source_code/Python/Python_ATOM/Django_REST/recipe-app-api-advanced
 
-
-f48c0b2d017d 5e96ae017cd6 4a2edbc4d00a 0c398ce68ef0 8a1bdb041889 6908c1b350b5 4a69bd4d2240 a707802a7f53
+docker-compose run --rm app sh -c "python manage.py test"
 
 
 File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 130, in connect
